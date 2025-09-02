@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const { reverseString, shortenString } = require('./helpers')
 
 // Home route
 router.get('/', (req, res) => {

@@ -6,22 +6,6 @@ const { handle404, handleGlobalError } = require('./errorHandlers')
 
 app.use('/', routes)
 
-/*
- * Helpers for Various Tasks
- */
-
-// Helper function to reverse a string
-const reverseString = (string) => [...string].reverse().join('')
-
-// Helper function to shorten a string to fifty characters
-const shortenString = (string) => {
-  return string.length > 50 ? string.substring(0, 50) + '...' : string
-}
-
-/*
- * 404 and Global Error Handlers
- */
-
 // Error handler for handling non-existent routes
 app.use(handle404)
 
