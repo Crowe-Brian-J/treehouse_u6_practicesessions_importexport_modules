@@ -28,9 +28,7 @@ router.get('/error', (req, res) => {
   console.log('Handling request to custom "error" route, "/error"')
 
   // Create custom error and print error message to the page
-  const err = new Error('err')
-  err.message = 'Oops, it looks like an error occurred.'
-  throw err
+  throw new Error('Oops, it looks like an error occurred.')
 })
 
 module.exports = router
